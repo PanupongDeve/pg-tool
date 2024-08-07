@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  pg_tool:
+      image: postgres:16
+      restart: always
+      command: ['sleep', 'infinity']
+      user: root
+      environment:
+        TZ: 'GMT+7'
+        PGTZ: 'GMT+7'
+      volumes:
+        - ./workspace:/workspace
